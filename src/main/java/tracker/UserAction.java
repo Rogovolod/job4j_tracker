@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package tracker;
 
 public interface UserAction {
     String name();
