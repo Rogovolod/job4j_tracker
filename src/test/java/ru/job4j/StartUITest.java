@@ -4,7 +4,6 @@ import org.junit.Test;
 import tracker.*;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
