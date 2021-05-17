@@ -1,9 +1,7 @@
-package ru.job4j;
+package tracker.sort;
 import org.junit.Assert;
 import org.junit.Test;
 import tracker.Item;
-import tracker.sort.SortByItemDecrease;
-import tracker.sort.SortByItemIncrease;
 
 import java.util.ArrayList;
 import java.util.Collections;

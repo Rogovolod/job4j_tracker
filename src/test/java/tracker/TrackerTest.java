@@ -1,8 +1,6 @@
-package ru.job4j;
+package tracker;
 
 import org.junit.Test;
-import tracker.Item;
-import tracker.Tracker;
 
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
