@@ -1,10 +1,13 @@
 package tracker;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Item {
     private String id;
     private String name;
+    private final String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"));
 
     public Item(String name) {
         this.name = name;
@@ -13,6 +16,10 @@ public class Item {
     public Item(String id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public String getDate() {
+        return date;
     }
 
     public String getId() {
@@ -33,7 +40,11 @@ public class Item {
 
     @Override
     public String toString() {
-    return String.format("ID: %s Name: %s", id, name);
+        return "Item {" +
+                "id = " + id +
+                ", name = " + name +
+                ", created: " + date +
+                '}';
     }
 
     @Override

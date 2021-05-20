@@ -31,6 +31,10 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
+        var item = new Item("3523535", "ho-ho-ho");
+        System.out.println(item.getDate());
+
+
         Output output = new ConsoleOutput();
         Input input = new ValidateInput(output, new ConsoleInput());
         Tracker tracker = new Tracker();
@@ -45,4 +49,5 @@ public class StartUI {
 
         new StartUI(output).init(input, tracker, actions);
     }
+
 }
