@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Item {
     private String id;
     private String name;
-    private final String date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"));
+    private final LocalDateTime created = LocalDateTime.now();
 
     public Item(String name) {
         this.name = name;
@@ -18,8 +18,8 @@ public class Item {
         this.name = name;
     }
 
-    public String getDate() {
-        return date;
+    public LocalDateTime getCreated() {
+        return created;
     }
 
     public String getId() {
@@ -43,7 +43,7 @@ public class Item {
         return "Item {" +
                 "id = " + id +
                 ", name = " + name +
-                ", created: " + date +
+                ", created: " + created.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")) +
                 '}';
     }
 

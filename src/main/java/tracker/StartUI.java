@@ -1,5 +1,6 @@
 package tracker;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class StartUI {
@@ -32,8 +33,7 @@ public class StartUI {
 
     public static void main(String[] args) {
         var item = new Item("3523535", "ho-ho-ho");
-        System.out.println(item.getDate());
-
+        System.out.println(item.getCreated().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss")));
 
         Output output = new ConsoleOutput();
         Input input = new ValidateInput(output, new ConsoleInput());
