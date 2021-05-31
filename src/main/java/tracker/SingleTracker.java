@@ -17,7 +17,6 @@ public final class SingleTracker {
 
     private SingleTracker() {
     }
-    /* реализовать singleton */
 
     public Item add(Item item) {
         return tracker.add(item);
