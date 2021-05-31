@@ -5,17 +5,16 @@ import java.util.List;
 public final class SingleTracker {
 
     private static SingleTracker singleTracker = null;
+    private Tracker tracker = new Tracker();
+
+    private SingleTracker() {
+    }
 
     public static SingleTracker getInstance() {
         if (singleTracker == null) {
             singleTracker = new SingleTracker();
         }
         return singleTracker;
-    }
-
-    private Tracker tracker = new Tracker();
-
-    private SingleTracker() {
     }
 
     public Item add(Item item) {
